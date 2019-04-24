@@ -4,12 +4,12 @@ module.exports = {
   mode: 'production',
   devtool: 'source-map',
   entry: {
-    'webpack-app': './app/javascripts/a.webpack'
+    'webpack-app': './app/javascripts/a.webpack',
   },
   output: {
-    path: path.resolve(__dirname, 'app', 'public'),
+    path: path.resolve(__dirname, 'app', 'dist'),
     filename: '[name].js',
-    publicPath: "/public/",
+    publicPath: "/dist/",
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -28,8 +28,8 @@ module.exports = {
           chunks: 'initial',
           name: 'webpack-vendor',
           enforce: true,
-        }
-      }
+        },
+      },
     },
-  }
+  },
 };
